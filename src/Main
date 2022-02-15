@@ -1,0 +1,148 @@
+Задача №2
+public class Main {
+    public static void main(String[] args) {
+
+        int sum = 0;
+        int counter = 0;
+        int result =0;
+        int[] massive = {10, -4, 20, -6, -15, 5, 25};
+
+        for (int i = 0; i < massive.length; i++) {
+            if (massive[i] > 0) {
+                sum = sum + massive[i];
+                counter ++;
+                result = sum/counter;
+            }
+        }
+        System.out.println("Сума положительных элементов массива = "+sum);
+        System.out.println("Количество положительных элементов массива = "+counter);
+        System.out.println("Среднее арифметическое положительных элементов массива = "+result);
+    }}
+
+Задача №3
+public class Main {
+    public static void main(String[] args) {
+
+       int array[] = {1,2,6,-4,4,5,-2,-5,2,3};
+        int max = 0;
+        int max_index = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < max) {
+                max = array[i];
+                max_index = i;
+            }}
+
+        System.out.println("Наибольший элемент: " + max);
+        System.out.println("Порядковый номер в массиве: " + max_index);
+
+    }}
+
+Задача №4
+public class Main {
+    public static void main(String[] args) {
+
+    int [] mas = {3, 3, 8, 9, 7, 8, 4, 6, 6, 8, 6, 9, 8, 6, 3, 3, 3, 5};
+    int a = 0;
+    int d = 0;
+
+    for(int i = 0; i < mas.length; i++){
+        for(int j = i+1; j < mas.length-1; j++){
+            if (mas[i] == mas[j]){
+                a = mas[i];
+                d++;
+            }
+        }
+        System.out.print("элемент "+a+" встречается "+d+" раз\n");
+        d = 0;
+        break;
+    }
+}
+
+Задача №5
+public class Main {
+    public static void main(String[] args) {
+
+    int array[] = {1,2,6,-4,4,5,-2,-5,2,3};
+    int max = 0;
+    int max_index = 0;
+
+    for (int i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+            max_index = i;
+        }}
+
+    System.out.println("Наибольший элемент: " + max);
+    System.out.println("Порядковый номер в массиве: " + max_index);
+
+}}
+
+Задача №6
+public class Main {
+    public static void main(String[] args) {
+    int a[] = {64, 99, 3, 15, 1, 45, 6, 9, 87, 32, 55};
+            int max = a[0];
+            int min = a[0];
+            int imax = 0;
+            int imin = 0;
+            for (int i = 1; i < a.length; i++) {
+                if (a[i] > max) {
+                    max = a[i];
+                    imax = i;
+                }
+                else if (a[i] < min) {
+                    min = a[i];
+                    imin = i;
+                }
+            }
+            a[imin] = max;
+            a[imax] = min;
+            for (int i = 0; i < a.length; i++) {
+                System.out.println("i=" + i + " a[" + i + "]=" + a[i]);
+            }
+        }
+    }
+
+Задача №8
+public class Main {
+    public static void main(String[] args) {
+
+        int[] myArray = {7, 1, 89, 8, 1, 67, 6, 5, 6, 7};
+        for (int i = 0; i < myArray.length; i++) {
+            boolean flag = true;
+            for (int j = 0; j < myArray.length; j++) {
+                if(myArray[i] == myArray[j] && i != j){
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag) System.out.print(myArray[i] + " ");
+        }
+    }
+    }
+
+
+Задача №9
+public class Main {
+    public static void main(String[] args) {
+    int [] a = { 1, 2, 3, 4, 5, 6, 7};
+        for (int i=0; i<a.length; i++){
+            System.out.print(a[i]);
+        }
+        System.out.println();
+
+        int n = a.length;
+        int temp;
+
+        for (int i = 0; i < n/2; i++) {
+            temp = a[n-i-1];
+            a[n-i-1] = a[i];
+            a[i] = temp;
+        }
+        for (int i=0; i<a.length; i++){
+            System.out.print(a[i]);
+        }
+    }}
+
+    }
